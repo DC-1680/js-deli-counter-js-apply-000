@@ -15,6 +15,6 @@ function nowServing(){
 
   let currentPerson = katzDeliLine[0];
   katzDeliLine = katzDeliLine.shift();
-  return `Current serving ${currentPerson};
+  return `Currently serving ${currentPerson}``;
 
 }
