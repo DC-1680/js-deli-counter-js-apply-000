@@ -15,6 +15,18 @@ function nowServing(line) {
   return `Currently serving ${line.shift()}.`
 };
 
-function currentLine(){
+function currentLine(line){
+  if (!line.length) {
+    return "The line is currently empty.";
+  }
 
+  let finalString = "The line is currently: "
+
+  for (let i = 0; i < line.length; i++){
+    if (i === 0){
+      finalString += `${i+1}. ${line[i]}`;
+    } else {
+      finalString += `, ${i+1}. ${line[i]}`;
+    }
+  }
 }
