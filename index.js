@@ -20,13 +20,10 @@ function currentLine(line){
     return "The line is currently empty.";
   }
 
-  let finalString = "The line is currently: "
+  let numbersAndNames = [];
 
   for (let i = 0; i < line.length; i++){
-    if (i === 0){
-      finalString += `${i+1}. ${line[i]}`;
-    } else {
-      finalString += `, ${i+1}. ${line[i]}`;
-    }
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
   }
+  return `The line is currently: ${numbersAndNames.join(', ')}`
 }
