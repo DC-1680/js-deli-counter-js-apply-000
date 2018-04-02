@@ -1,4 +1,6 @@
 
+var katzDeliLine = [];
+
 function takeANumber(katzDeliLine, name){
   katzDeliLine.push(name); 
   let currentPosition = katzDeliLine(name) + 1;
