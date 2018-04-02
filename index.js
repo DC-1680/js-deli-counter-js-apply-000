@@ -7,16 +7,13 @@ function takeANumber(katzDeliLine, name){
   return `Welcome, ${name}. You are number ${currentPosition} in line.`
 }
 
-function nowServing(){
-
-  if (katzDeliLine.length === -1){
-    return 'There is nobody waiting to be served!';
-  } else {
-    let currentPerson = katzDeliLine[0];
-    katzDeliLine = katzDeliLine.shift();
-    return "Currently serving " + currentPerson + ".";
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
   }
-}
+
+  return `Currently serving ${line.shift()}.`
+};
 
 function currentLine(){
 
